@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    background: rgb(9,29,85);
+    background: radial-gradient(circle, rgba(9,29,85,1) 15%, rgba(0,0,0,1) 85%);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#heading {
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    color: #fff;
+    text-shadow: 2px 2px 4px #091d55;
+    font-size: 50px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#container-input {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px 0px 0px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    position: relative;
+}
+
+.container .label {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    padding-left: 10px;
+    position: absolute;
+    top: 13px;
+    transition: 0.3s;
+    pointer-events: none;
+    color: #fff;
+}
+
+.input {
+    width: 100px;
+    height: 45px;
+    border: 3px solid #5CB8E4;
+    outline: none;
+    padding: 0px 7px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+.input:focus {
+    border: 2px solid transparent;
+    color: #fff;
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4),
+    inset 3px 3px 10px rgba(0,0,0,1),
+    inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+}
+
+.container .input:valid ~ .label,
+.container .input:focus ~ .label {
+    transition: 0.3s;
+    padding-left: 2px;
+    transform: translateY(-45px);
+}
+
+.container .input:valid,
+.container .input:focus {
+    border: 3px solid #5CB8E4;
+}
+
+#container-countdown {
+    display: flex;
+    justify-content: center;
+}
+
+#timerCountdown {
+    color: #5CB8E4;
+    text-shadow: 2px 2px 5px #000000;
+    font-size: 150px;
+    margin: 100px 0px;
+}
+
+.choice:hover {
+    background-color: #282A3A;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+}
+
+.btn {
+    background-color: #000000;
+    color: #FFF;
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 25px;
+    border-radius: 5px;
+    padding: 10px 0px;
+    width: 20%;
+    text-align: center;
+    margin: 0px 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#startBtn {
+    border: 3px solid #5BB318;
+    background-color: rgba(91, 179, 24, 0.3);
+}
+
+#startBtn:hover {
+    background-color: #5BB318;
+    font-weight: bolder;
+}
+
+#clearBtn {
+    border: 3px solid #5CB8E4;
+    background-color: rgba(92, 184, 228, 0.3);
+}
+
+#clearBtn:hover {
+    background-color: #5CB8E4;
+    font-weight: bolder;
+}
+
+@media all and (max-width: 820px) {
+    #timerCountdown {
+        font-size: 130px;
+        margin: 100px 10px;
+    }
+
+    .btn {
+        width: 35%;
+    }
+
+    #heading {
+        margin-top: 100px;
+    }
+}
+
+@media all and (max-width: 540px) {
+    #heading {
+        margin-top: 0px;
+    }
+
+    h2 {
+        font-size: 30px;
+        margin-top: 70px;
+    }
+
+    #container-input {
+    margin: 0px 10px;
+    }
+
+    .input {
+        width: 80%;
+    }
+
+    #timerCountdown {
+        font-size: 60px;
+        text-align: center;
+    }
+
+    #buttons {
+        justify-content: space-evenly;
+    }
+
+    .btn {
+        font-size: 20px;
+        margin: 0;
+    }
+}

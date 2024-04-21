@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🕓Easy Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="endSound">
+        <source src="assets/sound.mp3" type="audio/mp3">
+    </audio>
+    <div id="heading">
+        <h2>Easy Timer</h2>
+    </div>
+    <div id="container-input">
+        <div class="container">
+            <input id="hours" class="input" name="text" type="text" required="">
+            <label class="label">Hours</label>
+        </div>
+        <div class="container">
+            <input id="minutes" class="input" name="text" type="text" required="">
+            <label class="label">Minutes</label>
+        </div>
+        <div class="container">
+            <input id="seconds" class="input" name="text" type="text" required="">
+            <label class="label">Seconds</label>
+        </div>
+    </div>
+    <div id="container-countdown">
+        <p id="timerCountdown">00 : 00 : 00</p>
+    </div>
+    <div id="buttons">
+        <button id="startBtn" class="btn">Start</button>
+        <button id="clearBtn" class="btn">Clear</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
